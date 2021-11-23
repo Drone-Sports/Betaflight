@@ -1,12 +1,12 @@
-﻿iFlight’s 20cm CLI dump PID Tune     
-From Ciara on  7/30/21
+# iFlights 20cm CLI dump PID Tune     
+# From Ciara on  7/30/21
 
 
-------------
+# ------------
 
 
-board_name IFLIGHT_F411_PRO
-manufacturer_id IFRC
+# board_name IFLIGHT_F411_PRO
+# manufacturer_id IFRC
 
 
 # name: iFlight 20cm “Training tune”
