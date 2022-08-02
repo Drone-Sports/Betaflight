@@ -1,0 +1,230 @@
+defaults nosave
+
+###WARNING: NO CUSTOM DEFAULTS FOUND###
+
+# version
+# Betaflight / STM32F411 (S411) 4.3.0 Apr 25 2022 / 01:03:20 (9d71184) MSP API: 1.44
+###ERROR IN diff: NO CONFIG FOUND###
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name IFLIGHT_F411_PRO
+manufacturer_id IFRC
+mcu_id 002f002d3430511033353839
+signature 
+
+# name: TRAINING
+
+# resources
+resource BEEPER 1 B02
+resource MOTOR 1 A00
+resource MOTOR 2 B10
+resource MOTOR 3 B06
+resource MOTOR 4 B07
+resource PPM 1 A03
+resource LED_STRIP 1 A08
+resource SERIAL_TX 1 A09
+resource SERIAL_TX 2 A02
+resource SERIAL_RX 1 A10
+resource SERIAL_RX 2 A03
+resource I2C_SCL 1 B08
+resource I2C_SDA 1 B09
+resource LED 1 C13
+resource LED 2 C14
+resource SPI_SCK 1 A05
+resource SPI_SCK 2 B13
+resource SPI_SCK 3 B03
+resource SPI_MISO 1 A06
+resource SPI_MISO 2 B14
+resource SPI_MISO 3 B04
+resource SPI_MOSI 1 A07
+resource SPI_MOSI 2 B15
+resource SPI_MOSI 3 B05
+resource ADC_BATT 1 B00
+resource ADC_CURR 1 B01
+resource FLASH_CS 1 A15
+resource OSD_CS 1 B12
+resource GYRO_EXTI 1 A01
+resource GYRO_CS 1 A04
+resource USB_DETECT 1 C15
+
+# timer
+timer A03 AF3
+# pin A03: TIM9 CH2 (AF3)
+timer A00 AF1
+# pin A00: TIM2 CH1 (AF1)
+timer B10 AF1
+# pin B10: TIM2 CH3 (AF1)
+timer B06 AF2
+# pin B06: TIM4 CH1 (AF2)
+timer B07 AF2
+# pin B07: TIM4 CH2 (AF2)
+timer A08 AF1
+# pin A08: TIM1 CH1 (AF1)
+
+# dma
+dma ADC 1 1
+# ADC 1: DMA2 Stream 4 Channel 0
+dma pin A00 0
+# pin A00: DMA1 Stream 5 Channel 3
+dma pin B10 0
+# pin B10: DMA1 Stream 1 Channel 3
+dma pin B06 0
+# pin B06: DMA1 Stream 0 Channel 2
+dma pin B07 0
+# pin B07: DMA1 Stream 3 Channel 2
+dma pin A08 0
+# pin A08: DMA2 Stream 6 Channel 0
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature LED_STRIP
+
+# serial
+serial 1 64 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# led
+led 0 3,7::C:10
+led 1 3,8::C:10
+led 2 4,9::C:10
+led 3 5,10::C:10
+led 4 6,11::C:10
+led 5 7,12::L:1
+led 6 8,12::L:1
+led 7 9,12::L:1
+led 8 10,11::C:10
+led 9 11,10::C:10
+led 10 12,9::C:10
+led 11 13,8::C:10
+led 12 13,7::C:10
+led 13 13,6::C:10
+led 14 12,5::C:10
+led 15 11,4::C:10
+led 16 10,3::C:10
+led 17 9,2::C:1
+led 18 8,2::C:1
+led 19 7,2::C:1
+led 20 6,3::C:10
+led 21 5,4::C:10
+led 22 4,5::C:10
+led 23 3,6::C:10
+
+# aux
+aux 0 0 3 1500 2100 0 0
+aux 1 1 7 900 2100 0 0
+aux 2 35 0 1500 2100 0 0
+
+# master
+set gyro_lpf1_static_hz = 200
+set gyro_lpf2_static_hz = 800
+set dyn_notch_count = 0
+set dyn_notch_min_hz = 100
+set dyn_notch_max_hz = 1000
+set gyro_lpf1_dyn_min_hz = 0
+set acc_calibration = -24,19,98,1
+set mag_hardware = NONE
+set baro_bustype = I2C
+set baro_i2c_device = 1
+set baro_hardware = NONE
+set serialrx_provider = SBUS
+set blackbox_sample_rate = 1/2
+set blackbox_device = SPIFLASH
+set dshot_bitbang = OFF
+set motor_pwm_protocol = DSHOT300
+set vbat_max_cell_voltage = 422
+set vbat_warning_cell_voltage = 345
+set current_meter = ADC
+set battery_meter = ADC
+set ibata_scale = 100
+set beeper_inversion = ON
+set beeper_od = OFF
+set yaw_motors_reversed = ON
+set small_angle = 180
+set pid_process_denom = 1
+set simplified_gyro_filter = OFF
+set simplified_gyro_filter_multiplier = 80
+set osd_vbat_pos = 2403
+set osd_tim_2_pos = 2455
+set osd_flymode_pos = 2510
+set osd_current_pos = 2435
+set osd_warnings_pos = 12617
+set system_hse_mhz = 8
+set debug_mode = DUAL_GYRO_SCALED
+set max7456_spi_bus = 2
+set flash_spi_bus = 3
+set gyro_1_bustype = SPI
+set gyro_1_spibus = 1
+set name = TRAINING
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 0
+set dterm_lpf1_type = BIQUAD
+set dterm_lpf1_static_hz = 60
+set dterm_lpf2_static_hz = 120
+set iterm_relax = OFF
+set p_pitch = 90
+set i_pitch = 126
+set d_pitch = 52
+set f_pitch = 133
+set p_roll = 83
+set i_roll = 119
+set d_roll = 48
+set f_roll = 126
+set p_yaw = 88
+set i_yaw = 126
+set f_yaw = 126
+set angle_level_strength = 85
+set level_limit = 15
+set d_min_roll = 40
+set d_min_pitch = 45
+set auto_profile_cell_count = 4
+set simplified_pids_mode = OFF
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 80
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set thr_expo = 60
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 80
+set pitch_rc_rate = 80
+set yaw_rc_rate = 80
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
+set tpa_breakpoint = 1250
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 70
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
