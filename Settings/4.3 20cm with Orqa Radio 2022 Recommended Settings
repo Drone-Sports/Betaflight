@@ -385,7 +385,7 @@ mode_color 6 10 0
 mode_color 7 0 7
 
 # aux
-aux 0 0 1 1800 2100 0 0
+aux 0 0 0 1800 2100 0 0
 aux 1 1 7 900 2100 0 0
 aux 2 13 2 1700 2100 0 0
 aux 3 35 2 1600 2100 0 0
@@ -407,9 +407,9 @@ aux 18 0 0 900 900 0 0
 aux 19 0 0 900 900 0 0
 
 # adjrange
-adjrange 0 0 3 900 1300 12 3 0 0
-adjrange 1 0 3 1300 1650 12 3 0 0
-adjrange 2 0 3 1650 2100 12 3 0 0
+adjrange 0 0 1 900 1300 12 1 0 0
+adjrange 1 0 1 1300 1650 12 1 0 0
+adjrange 2 0 1 1650 2100 12 1 0 0
 adjrange 3 0 0 900 900 0 0 0 0
 adjrange 4 0 0 900 900 0 0 0 0
 adjrange 5 0 0 900 900 0 0 0 0
